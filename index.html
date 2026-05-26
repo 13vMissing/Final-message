@@ -8,7 +8,7 @@
   <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
   <script src="/_sdk/element_sdk.js"></script>
   <script src="/_sdk/data_sdk.js"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Dancing+Script:wght@400;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Dancing+Script:wght@400;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1[...]
   <style>
     @keyframes fadeInUp {
       from { opacity: 0; transform: translateY(30px); }
@@ -58,57 +58,57 @@
      <div id="edit-controls" class="hidden mb-8">
       <div class="text-center mb-6">
        <h2 class="text-2xl font-semibold mb-2" style="font-family: 'Dancing Script', cursive; color: #8b4513;">✏️ Edit Your Letter</h2>
-       <button onclick="exitEditMode()" class="px-5 py-1.5 rounded-full text-sm font-semibold transition-all shadow-sm border border-amber-300 hover:bg-amber-50" style="color: #8b4513; font-family: 'Cormorant Garamond', serif; background: #fffdf7;">👁️ Preview Visitor View</button>
+       <button onclick="exitEditMode()" class="px-5 py-1.5 rounded-full text-sm font-semibold transition-all shadow-sm border border-amber-300 hover:bg-amber-50" style="color: #8b4513; font-family: 'C[...]
       </div>
       
       <!-- Song Upload -->
       <div class="mb-6 p-6 rounded-2xl border border-amber-200" style="background: rgba(255,255,255,0.7);">
        <label class="block mb-2 text-sm font-medium" style="color: #8b4513; font-family: 'Cormorant Garamond', serif;">♫ Upload Song (MP3)</label> 
-       <input type="file" id="song-upload" accept="audio/mp3,audio/mpeg,audio/*" onchange="handleSongUpload(event)" class="block w-full text-sm file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-pink-100 file:text-pink-800 hover:file:bg-pink-200 cursor-pointer">
+       <input type="file" id="song-upload" accept="audio/mp3,audio/mpeg,audio/*" onchange="handleSongUpload(event)" class="block w-full text-sm file:mr-4 file:py-2 file:px-4 file:rounded-full file:bor[...]
        <p class="text-xs mt-2 text-center" style="color: #a0522d; font-family: 'Cormorant Garamond', serif;">OR</p>
-       <input type="text" id="song-url-input" placeholder="Paste MP3 URL here (Google Drive, Dropbox, direct link...)" class="block w-full mt-2 p-2 text-sm rounded-lg border border-pink-200 focus:outline-none focus:ring-2 focus:ring-pink-300" style="font-family: 'Cormorant Garamond', serif; background: #fffdf7;" onchange="handleSongUrl()">
+       <input type="text" id="song-url-input" placeholder="Paste MP3 URL here (Google Drive, Dropbox, direct link...)" class="block w-full mt-2 p-2 text-sm rounded-lg border border-pink-200 focus:outl[...]
        <p id="song-status" class="text-xs mt-2 italic" style="color: #a0522d; font-family: 'Cormorant Garamond', serif;">No song uploaded yet</p>
       </div>
       
       <!-- Voice Message Upload -->
       <div class="mb-6 p-6 rounded-2xl border border-amber-200" style="background: rgba(255,255,255,0.7);">
        <label class="block mb-2 text-sm font-medium" style="color: #8b4513; font-family: 'Cormorant Garamond', serif;">Upload Voice Message (MP3)</label> 
-       <input type="file" id="mp3-upload" accept="audio/mp3,audio/mpeg,audio/*" onchange="handleAudioUpload(event)" class="block w-full text-sm file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-amber-100 file:text-amber-800 hover:file:bg-amber-200 cursor-pointer">
+       <input type="file" id="mp3-upload" accept="audio/mp3,audio/mpeg,audio/*" onchange="handleAudioUpload(event)" class="block w-full text-sm file:mr-4 file:py-2 file:px-4 file:rounded-full file:bor[...]
        <p class="text-xs mt-2 text-center" style="color: #a0522d; font-family: 'Cormorant Garamond', serif;">OR</p>
-       <input type="text" id="voice-url-input" placeholder="Paste MP3 URL here (Google Drive, Dropbox, direct link...)" class="block w-full mt-2 p-2 text-sm rounded-lg border border-amber-200 focus:outline-none focus:ring-2 focus:ring-amber-300" style="font-family: 'Cormorant Garamond', serif; background: #fffdf7;" onchange="handleVoiceUrl()">
+       <input type="text" id="voice-url-input" placeholder="Paste MP3 URL here (Google Drive, Dropbox, direct link...)" class="block w-full mt-2 p-2 text-sm rounded-lg border border-amber-200 focus:ou[...]
        <p id="audio-status" class="text-xs mt-2 italic" style="color: #a0522d; font-family: 'Cormorant Garamond', serif;">No voice message uploaded yet</p>
       </div>
       
       <!-- Captions -->
       <div class="mb-6 p-6 rounded-2xl border border-amber-200" style="background: rgba(255,255,255,0.7);">
        <label class="block mb-2 text-sm font-medium" style="color: #8b4513; font-family: 'Cormorant Garamond', serif;">Song Caption</label> 
-       <input type="text" id="song-caption-input" class="w-full p-3 rounded-xl border border-amber-200 focus:outline-none focus:ring-2 focus:ring-amber-300 mb-4" style="font-family: 'Cormorant Garamond', serif; background: #fffdf7;" placeholder="♫ A song that reminds me of you"> 
+       <input type="text" id="song-caption-input" class="w-full p-3 rounded-xl border border-amber-200 focus:outline-none focus:ring-2 focus:ring-amber-300 mb-4" style="font-family: 'Cormorant Garamon[...]
        
        <label class="block mb-2 text-sm font-medium" style="color: #8b4513; font-family: 'Cormorant Garamond', serif;">Song Sub-caption (Optional)</label> 
-       <input type="text" id="song-subcaption-input" class="w-full p-3 rounded-xl border border-amber-200 focus:outline-none focus:ring-2 focus:ring-amber-300 mb-4" style="font-family: 'Cormorant Garamond', serif; background: #fffdf7;" placeholder="e.g. Listen with headphones"> 
+       <input type="text" id="song-subcaption-input" class="w-full p-3 rounded-xl border border-amber-200 focus:outline-none focus:ring-2 focus:ring-amber-300 mb-4" style="font-family: 'Cormorant Gara[...]
        
        <label class="block mb-2 text-sm font-medium" style="color: #8b4513; font-family: 'Cormorant Garamond', serif;">Song Lyrics (Optional)</label> 
-       <textarea id="lyrics-input" rows="4" class="w-full p-3 rounded-xl border border-amber-200 focus:outline-none focus:ring-2 focus:ring-amber-300 mb-4" style="font-family: 'Cormorant Garamond', serif; background: #fffdf7;" placeholder="Paste song lyrics here..."></textarea>
+       <textarea id="lyrics-input" rows="4" class="w-full p-3 rounded-xl border border-amber-200 focus:outline-none focus:ring-2 focus:ring-amber-300 mb-4" style="font-family: 'Cormorant Garamond', se[...]
 
        <label class="block mb-2 text-sm font-medium" style="color: #8b4513; font-family: 'Cormorant Garamond', serif;">Voice Message Caption</label> 
-       <input type="text" id="voice-caption-input" class="w-full p-3 rounded-xl border border-amber-200 focus:outline-none focus:ring-2 focus:ring-amber-300 mb-4" style="font-family: 'Cormorant Garamond', serif; background: #fffdf7;" placeholder="Read along with me">
+       <input type="text" id="voice-caption-input" class="w-full p-3 rounded-xl border border-amber-200 focus:outline-none focus:ring-2 focus:ring-amber-300 mb-4" style="font-family: 'Cormorant Garamo[...]
 
        <label class="block mb-2 text-sm font-medium" style="color: #8b4513; font-family: 'Cormorant Garamond', serif;">Voice Message Sub-caption (Optional)</label> 
-       <input type="text" id="voice-subcaption-input" class="w-full p-3 rounded-xl border border-amber-200 focus:outline-none focus:ring-2 focus:ring-amber-300 mb-4" style="font-family: 'Cormorant Garamond', serif; background: #fffdf7;" placeholder="e.g. A quick note before you read">
+       <input type="text" id="voice-subcaption-input" class="w-full p-3 rounded-xl border border-amber-200 focus:outline-none focus:ring-2 focus:ring-amber-300 mb-4" style="font-family: 'Cormorant Gar[...]
       </div>
       
       <!-- Video URL -->
       <div class="mb-6 p-6 rounded-2xl border border-amber-200" style="background: rgba(255,255,255,0.7);">
        <label class="block mb-2 text-sm font-medium" style="color: #8b4513; font-family: 'Cormorant Garamond', serif;">Video Link (YouTube, Vimeo, etc.)</label> 
-       <input type="text" id="video-url-input" class="w-full p-3 rounded-xl border border-amber-200 focus:outline-none focus:ring-2 focus:ring-amber-300 mb-2" style="font-family: 'Cormorant Garamond', serif; background: #fffdf7;" placeholder="Paste your video URL here" onchange="updateVideoDisplay()">
+       <input type="text" id="video-url-input" class="w-full p-3 rounded-xl border border-amber-200 focus:outline-none focus:ring-2 focus:ring-amber-300 mb-2" style="font-family: 'Cormorant Garamond',[...]
        <p id="video-status" class="text-xs mt-2 italic" style="color: #a0522d; font-family: 'Cormorant Garamond', serif;">No video link added yet</p>
       </div>
       
       <!-- Letter Text -->
       <div class="mb-6 p-6 rounded-2xl border border-amber-200" style="background: rgba(255,255,255,0.7);">
        <label class="block mb-2 text-sm font-medium" style="color: #8b4513; font-family: 'Cormorant Garamond', serif;">Your Letter</label> 
-       <textarea id="letter-input" rows="10" onchange="autoSaveLetter()" class="w-full p-4 rounded-xl border border-amber-200 resize-y focus:outline-none focus:ring-2 focus:ring-amber-300" style="font-family: 'Cormorant Garamond', serif; font-size: 1rem; line-height: 1.8; background: #fffdf7;" placeholder="Write your heart out..."></textarea> 
-       <button onclick="saveLetter()" id="save-btn" class="mt-4 w-full py-3 rounded-full text-white font-semibold transition-all hover:scale-[1.02]" style="background: linear-gradient(135deg, #d4a574, #c0392b); font-family: 'Cormorant Garamond', serif;">Save Letter</button>
+       <textarea id="letter-input" rows="10" onchange="autoSaveLetter()" class="w-full p-4 rounded-xl border border-amber-200 resize-y focus:outline-none focus:ring-2 focus:ring-amber-300" style="font[...]
+       <button onclick="saveLetter()" id="save-btn" class="mt-4 w-full py-3 rounded-full text-white font-semibold transition-all hover:scale-[1.02]" style="background: linear-gradient(135deg, #d4a574,[...]
        <p id="save-status" class="text-center text-sm mt-2 hidden" style="font-family: 'Cormorant Garamond', serif;"></p>
       </div>
      </div>
@@ -121,7 +121,7 @@
      <!-- Video Section -->
      <div class="mb-8 text-center" id="video-section" style="display: none;">
       <div id="video-container" class="rounded-2xl overflow-hidden border border-amber-200" style="background: rgba(0,0,0,0.1); padding: 0;">
-       <iframe id="video-frame" width="100%" height="400" style="border: none; display: block;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+       <iframe id="video-frame" width="100%" height="400" style="border: none; display: block;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfu[...]
       </div>
      </div>
      
@@ -135,10 +135,10 @@
        
        <!-- Lyrics Section -->
        <div id="lyrics-section" class="mt-4 hidden">
-        <button onclick="toggleLyrics()" id="lyrics-btn" class="px-4 py-1.5 rounded-full text-sm font-semibold transition-all border border-amber-300 hover:bg-amber-100" style="color: #8b4513; font-family: 'Cormorant Garamond', serif; background: rgba(255,255,255,0.6);">
+        <button onclick="toggleLyrics()" id="lyrics-btn" class="px-4 py-1.5 rounded-full text-sm font-semibold transition-all border border-amber-300 hover:bg-amber-100" style="color: #8b4513; font-fa[...]
          + Show Lyrics
         </button>
-        <div id="lyrics-display" class="hidden mt-4 p-4 rounded-xl text-left text-sm md:text-base whitespace-pre-wrap border border-amber-200" style="background: rgba(255, 253, 247, 0.8); font-family: 'Cormorant Garamond', serif; color: #5d4037; max-height: 250px; overflow-y: auto;"></div>
+        <div id="lyrics-display" class="hidden mt-4 p-4 rounded-xl text-left text-sm md:text-base whitespace-pre-wrap border border-amber-200" style="background: rgba(255, 253, 247, 0.8); font-family:[...]
        </div>
       </div>
      </div>
@@ -164,7 +164,7 @@
        <div class="divider-stars text-center text-xl mb-4 glow-soft" style="color: #d4a574;">
         ✦ ♡ ✦
        </div>
-       <div id="letter-display" class="letter-scroll overflow-y-auto" style="max-height: 400px; font-family: 'Cormorant Garamond', serif; font-size: 1.15rem; line-height: 2; color: #5d4037; white-space: pre-wrap;">Your letter will appear here...</div>
+       <div id="letter-display" class="letter-scroll overflow-y-auto" style="max-height: 400px; font-family: 'Cormorant Garamond', serif; font-size: 1.15rem; line-height: 2; color: #5d4037; white-spac[...]
        <div class="divider-stars text-center text-xl mt-4 glow-soft" style="color: #d4a574;">
         ✦ ♡ ✦
        </div>
@@ -189,8 +189,8 @@
      <input type="password" id="password-input" class="w-full p-3 rounded-xl border border-amber-200 focus:outline-none focus:ring-2 focus:ring-amber-400 mb-2 text-center" placeholder="Password">
      <p id="pwd-error" class="hidden text-red-500 text-sm mb-4" style="font-family: 'Cormorant Garamond', serif;">Incorrect password.</p>
      <div class="flex gap-3 justify-center mt-4">
-      <button onclick="hideLogin()" class="px-5 py-2 rounded-full font-semibold border border-amber-300 hover:bg-amber-50 transition-colors" style="color: #8b4513; font-family: 'Cormorant Garamond', serif;">Cancel</button>
-      <button onclick="verifyPassword()" class="px-5 py-2 rounded-full text-white font-semibold shadow-md transition-transform hover:scale-[1.02]" style="background: linear-gradient(135deg, #d4a574, #c0392b); font-family: 'Cormorant Garamond', serif;">Unlock</button>
+      <button onclick="hideLogin()" class="px-5 py-2 rounded-full font-semibold border border-amber-300 hover:bg-amber-50 transition-colors" style="color: #8b4513; font-family: 'Cormorant Garamond', s[...]
+      <button onclick="verifyPassword()" class="px-5 py-2 rounded-full text-white font-semibold shadow-md transition-transform hover:scale-[1.02]" style="background: linear-gradient(135deg, #d4a574, #[...]
      </div>
     </div>
    </div>
@@ -478,8 +478,9 @@
 
         updateVideoDisplay();
 
-        // 3. Save to Local Storage
+        // 3. Save to Local Storage AND Backend
         localStorage.setItem('letterData', JSON.stringify(state));
+        saveToBackend(state);
 
         // 4. Show Success Notification
         const status = document.getElementById('save-status');
@@ -495,75 +496,119 @@
         document.getElementById('letter-display').innerText = state.letterText;
     }
 
+    // --- Backend Persistence ---
+    function saveToBackend(data) {
+        // Try to use the data SDK if available
+        if (typeof dataSDK !== 'undefined' && dataSDK.saveData) {
+            dataSDK.saveData('letterData', data).catch(err => {
+                console.warn('Backend save failed:', err);
+            });
+        } else {
+            // Fallback: use fetch API to save to a backend endpoint
+            fetch('/api/save-letter', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data)
+            }).catch(err => {
+                console.warn('Backend API not available:', err);
+            });
+        }
+    }
+
     function loadSavedData() {
-        const saved = localStorage.getItem('letterData');
-        if (saved) {
-            const data = JSON.parse(saved);
-            
-            // Restore Inputs
-            if (data.songUrl) {
-                document.getElementById('song-url-input').value = data.songUrl;
-                handleSongUrl();
-            }
-            if (data.voiceUrl) {
-                document.getElementById('voice-url-input').value = data.voiceUrl;
-                handleVoiceUrl();
+        // First try to load from backend
+        loadFromBackend().then(backendData => {
+            if (backendData) {
+                applyLoadedData(backendData);
+                return;
             }
             
-            document.getElementById('song-caption-input').value = data.songCaption || '';
-            document.getElementById('song-subcaption-input').value = data.songSubCaption || '';
-            document.getElementById('voice-caption-input').value = data.voiceCaption || '';
-            document.getElementById('voice-subcaption-input').value = data.voiceSubCaption || '';
-            document.getElementById('letter-input').value = data.letterText || '';
-            document.getElementById('lyrics-input').value = data.lyricsText || '';
-            document.getElementById('video-url-input').value = data.videoUrl || '';
-            
-            // Restore Display UI
-            const songCapEl = document.getElementById('display-song-caption');
-            songCapEl.innerText = data.songCaption || '♫ A song that reminds me of you';
-            
-            const voiceCapEl = document.getElementById('display-voice-caption');
-            voiceCapEl.innerText = data.voiceCaption || 'Read along with me';
-            
-            // Restore Sub-captions toggling
-            const songSubCapEl = document.getElementById('display-song-subcaption');
-            if (data.songSubCaption) {
-                songSubCapEl.innerText = data.songSubCaption;
-                songSubCapEl.classList.remove('hidden');
-                songCapEl.classList.remove('mb-3');
-                songCapEl.classList.add('mb-1');
-            } else {
-                songSubCapEl.classList.add('hidden');
-                songCapEl.classList.remove('mb-1');
-                songCapEl.classList.add('mb-3');
+            // Fallback to localStorage
+            const saved = localStorage.getItem('letterData');
+            if (saved) {
+                applyLoadedData(JSON.parse(saved));
             }
+        });
+    }
 
-            const voiceSubCapEl = document.getElementById('display-voice-subcaption');
-            if (data.voiceSubCaption) {
-                voiceSubCapEl.innerText = data.voiceSubCaption;
-                voiceSubCapEl.classList.remove('hidden');
-                voiceCapEl.classList.remove('mb-3');
-                voiceCapEl.classList.add('mb-1');
-            } else {
-                voiceSubCapEl.classList.add('hidden');
-                voiceCapEl.classList.remove('mb-1');
-                voiceCapEl.classList.add('mb-3');
-            }
+    function loadFromBackend() {
+        // Try to use the data SDK if available
+        if (typeof dataSDK !== 'undefined' && dataSDK.getData) {
+            return dataSDK.getData('letterData').catch(() => null);
+        }
+        
+        // Fallback: use fetch API to load from backend
+        return fetch('/api/load-letter')
+            .then(res => res.ok ? res.json() : null)
+            .catch(() => null);
+    }
 
-            document.getElementById('letter-display').innerText = data.letterText || 'Your letter will appear here...';
-            
-            const lyricsSection = document.getElementById('lyrics-section');
-            const lyricsDisplay = document.getElementById('lyrics-display');
-            if (data.lyricsText && data.lyricsText.trim() !== '') {
-                lyricsSection.classList.remove('hidden');
-                lyricsDisplay.innerText = data.lyricsText;
-            } else {
-                lyricsSection.classList.add('hidden');
-            }
+    function applyLoadedData(data) {
+        // Restore Inputs
+        if (data.songUrl) {
+            document.getElementById('song-url-input').value = data.songUrl;
+            handleSongUrl();
+        }
+        if (data.voiceUrl) {
+            document.getElementById('voice-url-input').value = data.voiceUrl;
+            handleVoiceUrl();
+        }
+        
+        document.getElementById('song-caption-input').value = data.songCaption || '';
+        document.getElementById('song-subcaption-input').value = data.songSubCaption || '';
+        document.getElementById('voice-caption-input').value = data.voiceCaption || '';
+        document.getElementById('voice-subcaption-input').value = data.voiceSubCaption || '';
+        document.getElementById('letter-input').value = data.letterText || '';
+        document.getElementById('lyrics-input').value = data.lyricsText || '';
+        document.getElementById('video-url-input').value = data.videoUrl || '';
+        
+        // Restore Display UI
+        const songCapEl = document.getElementById('display-song-caption');
+        songCapEl.innerText = data.songCaption || '♫ A song that reminds me of you';
+        
+        const voiceCapEl = document.getElementById('display-voice-caption');
+        voiceCapEl.innerText = data.voiceCaption || 'Read along with me';
+        
+        // Restore Sub-captions toggling
+        const songSubCapEl = document.getElementById('display-song-subcaption');
+        if (data.songSubCaption) {
+            songSubCapEl.innerText = data.songSubCaption;
+            songSubCapEl.classList.remove('hidden');
+            songCapEl.classList.remove('mb-3');
+            songCapEl.classList.add('mb-1');
+        } else {
+            songSubCapEl.classList.add('hidden');
+            songCapEl.classList.remove('mb-1');
+            songCapEl.classList.add('mb-3');
+        }
 
-            if (data.videoUrl) {
-                updateVideoDisplay();
-            }
+        const voiceSubCapEl = document.getElementById('display-voice-subcaption');
+        if (data.voiceSubCaption) {
+            voiceSubCapEl.innerText = data.voiceSubCaption;
+            voiceSubCapEl.classList.remove('hidden');
+            voiceCapEl.classList.remove('mb-3');
+            voiceCapEl.classList.add('mb-1');
+        } else {
+            voiceSubCapEl.classList.add('hidden');
+            voiceCapEl.classList.remove('mb-1');
+            voiceCapEl.classList.add('mb-3');
+        }
+
+        document.getElementById('letter-display').innerText = data.letterText || 'Your letter will appear here...';
+        
+        const lyricsSection = document.getElementById('lyrics-section');
+        const lyricsDisplay = document.getElementById('lyrics-display');
+        if (data.lyricsText && data.lyricsText.trim() !== '') {
+            lyricsSection.classList.remove('hidden');
+            lyricsDisplay.innerText = data.lyricsText;
+        } else {
+            lyricsSection.classList.add('hidden');
+        }
+
+        if (data.videoUrl) {
+            updateVideoDisplay();
         }
     }
   </script>
